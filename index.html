@@ -16,7 +16,7 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <div class="nav-logo-text">
-                    <span class="adroit-text">ADROIT</span>
+                    <span class="adroit-text">ADRO<span class="adroit-it">IT</span></span>
                     <span class="innovation-text">INNOVATORS CLUB RIT</span>
                 </div>
             </div>
@@ -54,7 +54,7 @@
             <div class="hero-text">
                 <div class="hero-affiliation">
                     <h1 class="hero-title">
-                        <span class="adroit-text">ADROIT</span>
+                        <span class="adroit-text">ADRO<span class="adroit-it">IT</span></span>
                         <span class="innovation-text">INNOVATORS CLUB</span>
                     </h1>
                 </div>
@@ -74,7 +74,10 @@
             </div>
             
             <div class="hero-scroll-indicator">
-                <span>Scroll to explore</span>
+                <a href="#sessions" class="scroll-text-container">
+                    <span class="scroll-text">Be Ready for</span>
+                    <span class="scroll-highlight">Upcoming Hands-On Session</span>
+                </a>
                 <div class="scroll-arrow"></div>
             </div>
         </div>
@@ -171,10 +174,7 @@
                 <p class="section-subtitle">Meet the guiding minds behind AIC</p>
             </div>
             <div class="leadership-wrapper">
-                <button class="scroll-button left" id="scrollLeft">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <div class="leadership-content" id="leadershipContent">
+                <div class="leadership-row director-row">
                     <!-- Director -->
                     <div class="leader-card">
                         <div class="leader-image">
@@ -185,11 +185,13 @@
                             <p class="leader-role">Director</p>
                         </div>
                     </div>
-                    
+                </div>
+                
+                <div class="leadership-row">
                     <!-- Faculty Mentor -->
                     <div class="leader-card">
                         <div class="leader-image">
-                            <img src="images/faculty-mentor.jpg" alt="Faculty Mentor" />
+                            <img src="images/mentor.jpg" alt="Faculty Mentor" />
                         </div>
                         <div class="leader-info">
                             <h3 class="leader-name">Prof. S. S. Makdum</h3>
@@ -207,7 +209,9 @@
                             <p class="leader-role">President of AIC</p>
                         </div>
                     </div>
-                    
+                </div>
+                
+                <div class="leadership-row">
                     <!-- Secretary - Upcoming -->
                     <div class="leader-card">
                         <div class="leader-image">
@@ -236,9 +240,6 @@
                         </div>
                     </div>
                 </div>
-                <button class="scroll-button right" id="scrollRight">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
             </div>
         </div>
     </section>
@@ -332,14 +333,14 @@
     </section>
 
     <!-- Our Teams Section -->
-    <section class="teams-section" id="teams">
+    <!-- <section class="teams-section" id="teams">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Our <span>Teams</span></h2>
                 <p class="section-subtitle">Discover the specialized teams driving innovation at Adroit Innovators Club</p>
             </div>
             <div class="teams-grid">
-                <!-- Web Development Team -->
+                Web Development Team
                 <div class="team-card">
                     <div class="team-icon">💻</div>
                     <h3 class="team-name">Web Development Team</h3>
@@ -359,7 +360,7 @@
                     </div>
                 </div>
                 
-                <!-- Technical Team -->
+                Technical Team
                 <div class="team-card">
                     <div class="team-icon">⚙️</div>
                     <h3 class="team-name">Technical Team</h3>
@@ -379,7 +380,7 @@
                     </div>
                 </div>
                 
-                <!-- Blog Team -->
+                Blog Team
                 <div class="team-card">
                     <div class="team-icon">📝</div>
                     <h3 class="team-name">Blog Team</h3>
@@ -399,7 +400,7 @@
                     </div>
                 </div>
                 
-                <!-- Design & Media Team -->
+                Design & Media Team
                 <div class="team-card">
                     <div class="team-icon">🎨</div>
                     <h3 class="team-name">Design & Media Team</h3>
@@ -421,8 +422,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
+    
     <!-- Hackathons & Projects Section -->
     <!-- <section class="hackathons-projects-section" id="hackathons-section">
         <div class="container">
@@ -616,8 +618,8 @@
             <div class="sessions-container">
                     <div class="session-card">
                             <div class="overview-icon">🚀</div>
-                            <h3 class="overview-title mobile-with-icon"><span class="rocket-emoji">🚀</span> Get Ready for Our First Hands-On Event with <b>AWS</b>!</h3>
-                            <p class="overview-description">Get ready! We're launching our very first hands-on event soon — starting with <b>AWS</b>. Learn directly from industry experts, explore real-world cloud use cases, and gain practical skills that power today's tech industry.</p>
+                            <h3 class="overview-title mobile-with-icon"><span class="rocket-emoji">🚀</span> Get Ready for Our First Hands-On Event with <span class="aws-highlight">AWS</span>!</h3>
+                            <p class="overview-description">Get ready! We're launching our very first hands-on event soon — starting with <span class="aws-highlight">AWS</span>. Learn directly from industry experts, explore real-world cloud use cases, and gain practical skills that power today's tech industry.</p>
                             <div class="features-grid">
                                 <div class="feature-item">
                                     <i class="fas fa-chalkboard-teacher"></i>
@@ -699,87 +701,129 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Join <span>Adroit Innovators Club</span></h2>
-                <p class="section-subtitle">Be part of a community that builds, innovates, and grows together.</p>
+                <p class="section-subtitle">Be part of a community that builds, innovates, hacks, and grows together.</p>
             </div>
             
             <div class="join-content">
                 <div class="join-intro">
-                    <div class="intro-card">
-                        <h3>Why Join AIC?</h3>
-                        <p>Be part of a vibrant community of innovators, developers, and creators. Gain hands-on experience with real projects, participate in hackathons, and develop skills that matter in today's tech industry.</p>
-                        <div class="benefits-grid">
-                            <div class="benefit-item">
-                                <i class="fas fa-project-diagram"></i>
-                                <span>Real Projects</span>
-                            </div>
-                            <div class="benefit-item">
-                                <i class="fas fa-trophy"></i>
-                                <span>Hackathons</span>
-                            </div>
-                            <div class="benefit-item">
-                                <i class="fas fa-network-wired"></i>
-                                <span>Networking</span>
-                            </div>
-                            <div class="benefit-item">
-                                <i class="fas fa-tools"></i>
-                                <span>Skill Building</span>
+                    <div class="intro-card" style="width: 100%; max-width: 800px; margin: 0 auto;">
+                        <div class="application-info">
+                            <h4><i class="fas fa-calendar-alt"></i> Registration Deadline: <span class="deadline-date">January 15, 2025</span></h4>
+                            
+                            <ul class="guidelines-list">
+                                <li class="guideline-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Applicants may apply to multiple teams but will be selected for only one team.</span>
+                                </li>
+                                <li class="guideline-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Secretary position is open only to 3rd and Final Year students.</span>
+                                </li>
+                                <li class="guideline-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Club membership opportunities are open to all interested applicants.</span>
+                                </li>
+                                <li class="guideline-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>The Technical Team may include 10+ students across different technical areas.</span>
+                                </li>
+                            </ul>
+                            
+                            <div class="apply-section">
+                                <button class="cta primary" id="applyToAIC">Apply to AIC</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="teams-selection">
-                    <h3>Select a Team to Apply</h3>
-                    <div class="teams-selection-grid">
-                        <!-- Web Development Team Card -->
-                        <div class="selection-card join-team-card">
-                            <div class="card-header">
-                                <div class="team-icon">💻</div>
-                                <h4 class="team-name">Web Development</h4>
-                            </div>
-                            <div class="card-body">
-                                <p class="team-purpose">Building dynamic, responsive websites and web applications</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Technical Team Card -->
-                        <div class="selection-card join-team-card">
-                            <div class="card-header">
-                                <div class="team-icon">⚙️</div>
-                                <h4 class="team-name">Technical</h4>
-                            </div>
-                            <div class="card-body">
-                                <p class="team-purpose">Driving innovation through technical research and development</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Blog & Media Team Card -->
-                        <div class="selection-card join-team-card">
-                            <div class="card-header">
-                                <div class="team-icon">📝</div>
-                                <h4 class="team-name">Blog </h4>
-                            </div>
-                            <div class="card-body">
-                                <p class="team-purpose">Sharing knowledge and insights through technical content</p>
+                    <h3>Explore Our Teams to Apply</h3>
+                    <p class="section-subtitle">Discover the specialized teams driving innovation at Adroit Innovators Club</p>
+                    <div class="teams-grid">
+                        <!-- Web Development Team -->
+                        <div class="team-card">
+                            <div class="team-icon">💻</div>
+                            <h3 class="team-name">Web Development Team</h3>
+                            <div class="team-badge">1 Team Leader · 4 Team Members</div>
+                            <p class="team-purpose">Building dynamic, responsive websites and web applications</p>
+                            <button class="team-toggle-btn">View Roles & Responsibilities</button>
+                            <div class="team-details">
+                                <p class="team-overview">The Web Development Team focuses on designing, developing, and maintaining dynamic web applications that enhance user experience and solve real-world problems. The team aims to build responsive, efficient, and scalable digital platforms using modern web technologies.</p>
+                                <h4>Roles & Responsibilities:</h4>
+                                <ul class="team-responsibilities">
+                                    <li>Create, maintain, and optimize responsive web applications for various projects</li>
+                                    <li>Develop complete web solutions using HTML, CSS, JavaScript, React, Flask, and cloud services</li>
+                                    <li>Focus on user experience, interface design, and accessibility</li>
+                                    <li>Handle deployment, cloud integration, and server management using platforms like AWS</li>
+                                </ul>
+                                <div class="team-note">Team members will be added soon</div>
                             </div>
                         </div>
                         
-                        <!-- Design Team Card -->
-                        <div class="selection-card join-team-card">
-                            <div class="card-header">
-                                <div class="team-icon">🎨</div>
-                                <h4 class="team-name">Design & Media</h4>
+                        <!-- Technical Team -->
+                        <div class="team-card">
+                            <div class="team-icon">⚙️</div>
+                            <h3 class="team-name">Technical Team</h3>
+                            <div class="team-badge">1 Team Leader · 4 Team Members</div>
+                            <p class="team-purpose">Driving innovation through technical research and development</p>
+                            <button class="team-toggle-btn">View Roles & Responsibilities</button>
+                            <div class="team-details">
+                                <p class="team-overview">The Technical Team is the backbone of the Adroit Innovators Club, turning innovative ideas into real-world technological solutions. The team works on practical projects and provides strong hands-on experience across multiple engineering disciplines.</p>
+                                <p class="team-overview">Students from all departments are welcome, including CSE, CSIT, AIML, ENTC, Electrical, Mechanical, Civil, and other allied branches, based on their technical interests.</p>
+                                <h4>Roles & Responsibilities:</h4>
+                                <ul class="team-responsibilities">
+                                    <li>Design and develop real-world technical projects</li>
+                                    <li>Work across domains such as software, hardware, IoT, electronics, automation, and data</li>
+                                    <li>Mentor peers in coding, debugging, and industry-relevant tools</li>
+                                    <li>Guide students in best coding practices and project development</li>
+                                    <li>Support participation in technical competitions, hackathons, and project execution</li>
+                                </ul>
+                                <div class="team-note">Team members will be added soon</div>
                             </div>
-                            <div class="card-body">
-                                <p class="team-purpose">Creating visually stunning and user-centric designs</p>
+                        </div>
+                        
+                        <!-- Blog Team -->
+                        <div class="team-card">
+                            <div class="team-icon">📝</div>
+                            <h3 class="team-name">Blog Team</h3>
+                            <div class="team-badge">1 Team Leader · 4 Team Members</div>
+                            <p class="team-purpose">Sharing knowledge and insights through technical content</p>
+                            <button class="team-toggle-btn">View Roles & Responsibilities</button>
+                            <div class="team-details">
+                                <p class="team-overview">The Blog Team serves as the voice of the Adroit Innovators Club by documenting innovation, learning, and impact. This team helps spread awareness and shares inspiring content with students across Maharashtra.</p>
+                                <h4>Roles & Responsibilities:</h4>
+                                <ul class="team-responsibilities">
+                                    <li>Write engaging blogs about technical sessions, projects, events, and innovations</li>
+                                    <li>Highlight journeys and achievements to motivate other students</li>
+                                    <li>Maintain a consistent publishing schedule on the club's official platform</li>
+                                    <li>Ensure all written content aligns with the club's mission and values</li>
+                                </ul>
+                                <div class="team-note">Team members will be added soon</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Design & Media Team -->
+                        <div class="team-card">
+                            <div class="team-icon">🎨</div>
+                            <h3 class="team-name">Design & Media Team</h3>
+                            <div class="team-badge">1 Team Leader · 4 Team Members</div>
+                            <p class="team-purpose">Creating visually stunning and user-centric designs</p>
+                            <button class="team-toggle-btn">View Roles & Responsibilities</button>
+                            <div class="team-details">
+                                <p class="team-overview">The Design & Media Team shapes the visual and digital identity of the Adroit Innovators Club. This team is responsible for creating impactful designs and managing media content that supports events, content creation, and the club's overall digital presence.</p>
+                                <h4>Roles & Responsibilities:</h4>
+                                <ul class="team-responsibilities">
+                                    <li>Create visual assets using modern design tools</li>
+                                    <li>Design posters, banners, and digital creatives for events and activities</li>
+                                    <li>Manage media content including social media visuals, reels, videos, and photography</li>
+                                    <li>Support other teams with UI design, graphics, and visual storytelling</li>
+                                    <li>Ensure visual consistency across all club materials and platforms</li>
+                                </ul>
+                                <div class="team-note">Team members will be added soon</div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="apply-section">
-                        <button class="cta primary" id="applyButton" disabled>Apply to AIC</button>
-                        <!-- <p class="apply-hint">Select a team above to enable the application button</p> -->
-                    </div>
                 </div>
             </div>
         </div>

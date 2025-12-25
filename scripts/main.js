@@ -322,67 +322,9 @@ function initLeadershipSectionAnimations() {
             elementObserver.observe(card);
         });
     }
-    
-    // Initialize horizontal scrolling for leadership section
-    initLeadershipHorizontalScroll();
 }
 
-// Function to initialize horizontal scrolling for leadership section
-function initLeadershipHorizontalScroll() {
-    const leadershipContent = document.getElementById('leadershipContent');
-    const scrollLeftBtn = document.getElementById('scrollLeft');
-    const scrollRightBtn = document.getElementById('scrollRight');
-    
-    if (leadershipContent && scrollLeftBtn && scrollRightBtn) {
-        // Scroll amount - adjust as needed
-        const scrollAmount = 320; // Match card width
-        
-        // Scroll right
-        scrollRightBtn.addEventListener('click', function() {
-            leadershipContent.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
-        });
-        
-        // Scroll left
-        scrollLeftBtn.addEventListener('click', function() {
-            leadershipContent.scrollBy({
-                left: -scrollAmount,
-                behavior: 'smooth'
-            });
-        });
-        
-        // Hide/show buttons based on scroll position
-        function updateButtons() {
-            const scrollLeft = leadershipContent.scrollLeft;
-            const maxScroll = leadershipContent.scrollWidth - leadershipContent.clientWidth;
-            
-            // Hide left button if at start
-            if (scrollLeft <= 0) {
-                scrollLeftBtn.classList.add('hidden');
-            } else {
-                scrollLeftBtn.classList.remove('hidden');
-            }
-            
-            // Hide right button if at end
-            if (scrollLeft >= maxScroll - 5) {
-                scrollRightBtn.classList.add('hidden');
-            } else {
-                scrollRightBtn.classList.remove('hidden');
-            }
-        }
-        
-        // Initial check
-        updateButtons();
-        
-        // Update on scroll
-        leadershipContent.addEventListener('scroll', updateButtons);
-        
-        // Update on resize
-        window.addEventListener('resize', updateButtons);
-    }
-}
+
 
 // Function to initialize animations for objectives section
 function initObjectivesSectionAnimations() {
@@ -655,50 +597,16 @@ function initTeamsSection() {
 
 // Function to initialize join section with Google Form integration
 function initJoinSection() {
-    const joinTeamCards = document.querySelectorAll('.join-team-card');
-    const applyButton = document.getElementById('applyButton');
-    
-    // Add click event to team cards for selection
-    joinTeamCards.forEach(card => {
-        card.addEventListener('click', () => {
-            // Remove selected class from all cards
-            joinTeamCards.forEach(c => c.classList.remove('selected'));
+    // Open Google Form when apply button is clicked
+    const applyToAICButton = document.getElementById('applyToAIC');
+    if (applyToAICButton) {
+        applyToAICButton.addEventListener('click', () => {
             
-            // Add selected class to clicked card
-            card.classList.add('selected');
+            // Open the Google Form directly
+            const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSeONDzC1dbrvVrljKHkh3-R48bI-37LgiMTWY_bGr5iJGMcwg/viewform?usp=pp_url';
             
-            // Enable apply button
-            if (applyButton) {
-                applyButton.disabled = false;
-                
-                // Add hover effect
-                applyButton.addEventListener('mouseenter', () => {
-                    applyButton.style.transform = 'translateY(-3px)';
-                });
-                
-                applyButton.addEventListener('mouseleave', () => {
-                    applyButton.style.transform = 'translateY(0)';
-                });
-            }
-        });
-    });
-    
-    // Open Google Form with selected team when apply button is clicked
-    if (applyButton) {
-        applyButton.addEventListener('click', () => {
-            const selectedCard = document.querySelector('.join-team-card.selected');
-            if (selectedCard) {
-                // Get the team name from the selected card
-                const teamNameElement = selectedCard.querySelector('.team-name');
-                const teamName = teamNameElement ? teamNameElement.textContent : 'Unknown Team';
-                
-                // Construct the Google Form URL with the team name as a pre-filled value
-                // Using the actual entry ID you found: entry.100701967
-                const googleFormUrl = `https://docs.google.com/forms/d/e/1FAIpQLSeONDzC1dbrvVrljKHkh3-R48bI-37LgiMTWY_bGr5iJGMcwg/viewform?usp=pp_url&entry.100701967=${encodeURIComponent(teamName + ' Team')}`;
-                
-                // Open the Google Form in a new tab with the team pre-filled
-                window.open(googleFormUrl, '_blank');
-            }
+            // Open the Google Form in a new tab
+            window.open(googleFormUrl, '_blank');
         });
     }
 }
